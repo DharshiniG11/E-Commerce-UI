@@ -969,20 +969,20 @@
             let html = '';
             cart.forEach(item => {
                 html += `
-                    <div class="cart-item" data-id="${item.id}">
+                    <div class="cart-item" data-id="Rs{item.id}">
                         <div class="cart-item-image">
-                            <img src="${item.image}" alt="${item.name}">
+                            <img src="${item.image}" alt="Rs{item.name}">
                         </div>
                         <div class="cart-item-details">
-                            <h4 class="cart-item-title">${item.name}</h4>
-                            <p class="cart-item-price">$${item.price.toFixed(2)}</p>
+                            <h4 class="cart-item-title">Rs{item.name}</h4>
+                            <p class="cart-item-price">Rs{item.price.toFixed(2)}</p>
                             <div class="cart-item-actions">
                                 <div class="quantity-control">
-                                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                                    <input type="text" class="quantity-input" value="${item.quantity}" readonly>
-                                    <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                                    <button class="quantity-btn" onclick="updateQuantity(Rs{item.id}, -1)">-</button>
+                                    <input type="text" class="quantity-input" value="Rs{item.quantity}" readonly>
+                                    <button class="quantity-btn" onclick="updateQuantity(Rs{item.id}, 1)">+</button>
                                 </div>
-                                <span class="remove-item" onclick="removeItem(${item.id})">Remove</span>
+                                <span class="remove-item" onclick="removeItem(Rs{item.id})">Remove</span>
                             </div>
                         </div>
                     </div>
